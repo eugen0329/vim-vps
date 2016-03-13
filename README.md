@@ -7,12 +7,11 @@ mv ~/.vim ~/.vim.bak
 # Or
 # rm -rf ~/.vim
 
-git clone https://github.com/eugen0329/vim-vps ~/.vim \
-  && git -C ~/.vim submodule update --init
+git clone --recursive https://github.com/eugen0329/vim-vps ~/.vim
 ```
 
 ## Update
 
 ```bash
-git -C ~/.vim pull --recurse-submodules
+git -C ~/.vim pull && git -C ~/.vim submodule update --recursive --init
 ```
