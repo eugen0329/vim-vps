@@ -1,0 +1,3 @@
+[submodule "bundle/monit"]
+	path = bundle/monit
+	url = https://github.com/tmatilai/vim-monit
