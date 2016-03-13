@@ -1,3 +1,6 @@
 [submodule "bundle/monit"]
 	path = bundle/monit
 	url = https://github.com/tmatilai/vim-monit
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://github.com/tpope/vim-commentary
