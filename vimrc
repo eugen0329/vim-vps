@@ -1,11 +1,35 @@
 execute pathogen#infect()
 
-" load ftplugin.vim, indent.vim
-filetype plugin indent on
-syntax on
+if has('autocmd')
+  filetype plugin indent on " load ftplugin.vim, indent.vim
+endif
 
-" enable number column
-set nu
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
+
+" Line num col
+set number
+" Enable statusline
+set laststatus=2
+
+set list
+set listchars=tab:>\ ,trail:-
+
+set autoindent
+set backspace=indent,eol,start
+
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
+
+
+set noundofile
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swapfiles
+
+set history=3000
+
 
 " TabStop: tab len,
 " SoftTabStop: n spaces inserted with <Tab>,
