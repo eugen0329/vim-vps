@@ -58,6 +58,9 @@ nnoremap = ==
 
 imap <C-h> <BS>
 
+" Enter cmdline more conveniently
+nnoremap ; :
+
 " Jump in cmdline
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
