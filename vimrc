@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set nocompatible
+
 if has('autocmd')
   filetype plugin indent on " load ftplugin.vim, indent.vim
 endif
@@ -25,6 +27,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j " Delete comment character when joining commented lines
 endif
 
+set omnifunc=syntaxcomplete#Complete
 
 set noundofile
 set backupdir=~/.vim/tmp/backup// " backups
