@@ -12,6 +12,8 @@ endif
 set number
 " Enable statusline
 set laststatus=2
+" Better cmdline completion
+set wildmenu
 
 set list
 set listchars=tab:>\ ,trail:-
