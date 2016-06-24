@@ -70,5 +70,5 @@ nnoremap ; :
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
-" Disable annoying 'Entering Ex mode. Type...'
-nmap Q <Nop>
+" Replace annoying 'Entering Ex mode. Type...' with ordinary :quit
+nmap Q :q<CR>
