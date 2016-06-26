@@ -16,7 +16,7 @@ setlocal indentexpr=GetYamlIndent()
 setlocal indentkeys=o,O,*<Return>,!^F
 
 function! GetYamlIndent()
-  let prevlnum = v:lnum - 1
+  let prevlnum = prevnonblank(v:lnum - 1)
   if prevlnum == 0
     return 0
   endif
@@ -29,7 +29,7 @@ function! GetYamlIndent()
 
   if prevline =~ ':$'
     return increase
-  elseif prevline =~ '^\s\+\-' && line =~ '^\s\+[^-]\+:'
+  elseif prevline =~ '^\s*\-' && line =~ '^\s\+[^-]\+:'
     return decrease
   elseif prevline =~ '|$'
     return increase
